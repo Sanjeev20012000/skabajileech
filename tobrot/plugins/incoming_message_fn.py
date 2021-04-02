@@ -313,7 +313,7 @@ async def split_video(client, message):
             user_id = message.from_user.id
             final_response = await upload_to_tg(
                 message,
-                splits_parts_dir_loc,
+                f'/app/{splits_parts_dir_loc}',
                 user_id,
                 response
             )
