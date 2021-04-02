@@ -281,7 +281,7 @@ async def split_video(client, message):
     start_seconds = None
     end_seconds = None
     if len(message.command) > 1 and message.command[1].isdigit():
-       download_loc = await down_load_media_f(client, message)
+        download_loc = await down_load_media_f(client, message)
         if int(message.command[1]) > 20:
             await message.reply_text(f"presently {SPLIT_COMMAND} command support only 20 parts maximum")
         else:
