@@ -168,7 +168,7 @@ async def upload_to_gdrive(file_upload, message, messa_ge, g_id):
         fole.write(f"{RCLONE_CONFIG}")
     destination = f'{DESTINATION_FOLDER}'
     if os.path.isfile(file_upload):
-        g_au = ['rclone', 'copy', '--config=/app/rclone.conf', f'{file_upload}', 'DRIVE:'f'{destination}', '-v']
+        g_au = ['rclone', 'copy', '--config=/app/rclone.conf', f'/app/app/main/skabajileech-master/tobrot/DOWNLOADS/{file_upload}', 'DRIVE:'f'{destination}', '-v']
         tmp = await asyncio.create_subprocess_exec(*g_au, stdout=asyncio.subprocess.PIPE,
                                                    stderr=asyncio.subprocess.PIPE)
         pro, cess = await tmp.communicate()
