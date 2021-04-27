@@ -177,7 +177,8 @@ async def upload_document_f(client, message):
                 imsegd,
                 local_file_name,
                 message.from_user.id,
-                {}
+                {},
+                client
             )
             LOGGER.info(recvd_response)
     await imsegd.delete()
